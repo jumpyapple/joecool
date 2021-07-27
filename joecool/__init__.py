@@ -1,11 +1,12 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, Response, render_template, request
 
-def create_app():
+
+def create_app() -> Flask:
     """Create flask app."""
     app = Flask(__name__)
 
     @app.route("/", methods=["GET", "POST"])
-    def home():
+    def home() -> Response:
         if request.method == "POST":
             input_text = request.form.get("input_text", None)
             if input_text:
