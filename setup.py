@@ -26,7 +26,7 @@ setup(
     author_email="pypi@jumpyapple.dev",
     license="MIT",
     packages=["joecool"],
-    install_requires=["flask"],
+    install_requires=["flask", "gunicorn"],
     include_package_data=True,
     zip_safe=False,
 )
